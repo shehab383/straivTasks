@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soapenv:Envelope
+    xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+    <soapenv:Header
+        xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsse:Security
+            xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="0">
+            <wsse:UsernameToken
+                xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+                <wsse:Username>plac@SLH_TEST</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">xRZ43HnKMyFiQjWFyRpM5bWW</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <wsa:To>https://ickarus.code2order.com/api/pms/infor/income</wsa:To>
+        <wsa:MessageID>M3694231</wsa:MessageID>
+        <wsa:Action>urn:anonOutInOpResponse</wsa:Action>
+    </soapenv:Header>
+    <soapenv:Body>
+        <OTA_HotelResNotifRQ
+            xmlns="http://www.opentravel.org/OTA/2003/05"
+            xmlns:ns2="http://schema.softbrands.com/HMS/extensions/1"
+            xmlns:ns4="http://www.serenata.com/tpaextensions/2007/08"
+            xmlns:ns3="http://hms.infor.com/databridge/extota/1" ResStatus="Commit" EchoToken="M3694236" TimeStamp="2021-05-23T09:18:35.597" Version="1" CorrelationID="PMSEvent.RESERVATION:ReservationStay(921):203622">
+            <POS>
+                <Source>
+                    <RequestorID Type="22" ID="HMS"/>
+                    <BookingChannel Type="4" Primary="true">
+                        <CompanyName Code="HMS">Hospitality Management Solution</CompanyName>
+                    </BookingChannel>
+                </Source>
+            </POS>
+            <HotelReservations>
+                <HotelReservation ResStatus="Reserved" RoomNumberLockedIndicator="false" CreateDateTime="2021-05-23T11:17:30.670" CreatorID="CPDE2ORDER" LastModifyDateTime="2021-05-23T11:17:30.670" LastModifierID="CPDE2ORDER">
+                    <UniqueID Type="10" Instance="HMS" ID="53501327-1" ID_Context="PMS"/>
+                    <RoomStays>
+                        <RoomStay MarketCode="LEISUR" SourceOfBusiness="CALL" TotalRawRateValueBeforeTax="180.5800">
+                            <RoomTypes>
+                                <RoomType RoomTypeCode="DDD">
+                                    <RoomDescription Name="Deluxe Double">
+                                        <Text>2 Full Beds</Text>
+                                    </RoomDescription>
+                                </RoomType>
+                            </RoomTypes>
+                            <RatePlans>
+                                <RatePlan RatePlanCode="AAA" PriceViewableInd="true">
+                                    <RatePlanDescription>
+                                        <Text>AAA Discount Rate</Text>
+                                    </RatePlanDescription>
+                                    <RatePlanInclusions TaxInclusive="false"/>
+                                    <MealsIncluded MealPlanIndicator="true"/>
+                                </RatePlan>
+                            </RatePlans>
+                            <RoomRates>
+                                <RoomRate RoomTypeCode="DDD" InvBlockCode="" NumberOfUnits="1" RatePlanCode="AAA" RatePlanCategory="LEISUR">
+                                    <Rates>
+                                        <Rate RateTimeUnit="Day" UnitMultiplier="1" EffectiveDate="2021-05-22" ExpireDate="2021-05-23">
+                                            <Base AmountBeforeTax="180.5800" CurrencyCode="USD">
+                                                <Taxes CurrencyCode="USD" Amount="14.4500"/>
+                                            </Base>
+                                            <Fees>
+                                                <Fee ChargeFrequency="Daily" Type="Exclusive" Code="12" Amount="0.0000" CurrencyCode="USD"/>
+                                            </Fees>
+                                        </Rate>
+                                    </Rates>
+                                </RoomRate>
+                                <TPA_Extensions>
+                                    <ns2:HMS_Extensions RoomPhoneExtension=""/>
+                                </TPA_Extensions>
+                            </RoomRates>
+                            <GuestCounts IsPerRoom="true">
+                                <GuestCount AgeQualifyingCode="10" Count="1"/>
+                                <GuestCount AgeQualifyingCode="8" Count="0"/>
+                            </GuestCounts>
+                            <TimeSpan Start="2021-05-22" Duration="P0Y0M1DT0H0M" End="2021-05-23"/>
+                            <Guarantee GuaranteeCode="CASH" GuaranteeType="None"/>
+                            <CancelPenalties/>
+                            <Total AmountBeforeTax="180.5800" AmountAfterTax="195.0300" CurrencyCode="USD">
+                                <Taxes CurrencyCode="USD" Amount="14.4500">
+                                    <Tax/>
+                                </Taxes>
+                            </Total>
+							<Services>
+								<Service>LateCheckOut</Service>
+								<Service>Spa Access</Service>
+								<Service>Minibar</Service>
+								<Service>TourismCard</Service>
+							</Services>
+                            <BasicPropertyInfo ChainCode="SBR" HotelCode="LTRSRT">
+                                <Address>
+                                    <AddressLine>50 White Pines Trail</AddressLine>
+                                    <CityName>Eustis</CityName>
+                                    <PostalCode>04936</PostalCode>
+                                    <StateProv StateCode="ME"/>
+                                    <CountryName Code="US"/>
+                                </Address>
+                            </BasicPropertyInfo>
+                            <TPA_Extensions>
+                                <ns2:HMS_Extensions>
+                                    <ns2:PropertyDetails>
+                                        <ns2:EmailAddresses/>
+                                    </ns2:PropertyDetails>
+                                    <ns2:ProfileInfo>
+                                        <ns2:NewGuestProfile>true</ns2:NewGuestProfile>
+                                    </ns2:ProfileInfo>
+                                    <ns2:Settlement/>
+                                    <ns2:Preferences/>
+                                </ns2:HMS_Extensions>
+                            </TPA_Extensions>
+                            <ResGuestRPHs>1</ResGuestRPHs>
+                            <Memberships/>
+                            <Comments/>
+                            <SpecialRequests/>
+                        </RoomStay>
+                    </RoomStays>
+                    <ResGuests>
+                        <ResGuest ResGuestRPH="1" VIP="false" PrimaryIndicator="true">
+                            <Profiles>
+                                <ProfileInfo>
+                                    <UniqueID Type="1" ID="1137" ID_Context="HMS"/>
+                                    <UniqueID Type="1" Instance="HMS" ID="1137" ID_Context="PMS">
+                                        <CompanyName Code="LTRSRT" CodeContext="hotel"/>
+                                    </UniqueID>
+                                    <UniqueID Type="1" Instance="GLOWING" ID="40b7275a-01f0-42" ID_Context="CRM"/>
+                                    <UniqueID Type="1" ID="1137" ID_Context="HMSManaged"/>
+                                    <Profile StatusCode="4" CreateDateTime="2021-05-23T09:17:29.670" CreatorID="CPDE2ORDER" LastModifyDateTime="2021-05-23T09:18:34.340" LastModifierID="GLOWING" ShareAllMarketInd="No" NonRegisteredGuest="false" AutoEmailFolio="false" ProfileType="1">
+                                        <Customer VVIP="false">
+                                            <PersonName>
+                                                <GivenName>Murray</GivenName>
+                                                <Surname>James</Surname>
+                                            </PersonName>
+                                            <CustLoyalty/>
+                                            <TPA_Extensions>
+                                                <ns2:HMS_Extensions>
+                                                    <ns2:NoPost>false</ns2:NoPost>
+                                                    <ns2:TwitterID>*</ns2:TwitterID>
+                                                    <ns2:FacebookID>*</ns2:FacebookID>
+                                                    <ns2:TripAdvisorID>*</ns2:TripAdvisorID>
+                                                    <ns2:BookingDotcomID>*</ns2:BookingDotcomID>
+                                                    <ns2:HasWebAccess>false</ns2:HasWebAccess>
+                                                    <ns2:DoNotMerge>false</ns2:DoNotMerge>
+                                                    <ns2:MilitaryDesignation>
+                                                        <ns2:Rank/>
+                                                        <ns2:Service/>
+                                                        <ns2:PayGrade/>
+                                                    </ns2:MilitaryDesignation>
+                                                    <ns2:RestrictedProperties/>
+                                                    <ns2:PlayerDetail/>
+                                                    <ns2:GDPR>
+                                                        <ns2:GuestOptIn1 OptInTerms="TEST1">false</ns2:GuestOptIn1>
+                                                        <ns2:GuestOptIn2 OptInTerms="TEST2">false</ns2:GuestOptIn2>
+                                                        <ns2:GuestOptIn3>false</ns2:GuestOptIn3>
+                                                        <ns2:GuestOptIn4>false</ns2:GuestOptIn4>
+                                                        <ns2:GuestOptIn5>false</ns2:GuestOptIn5>
+                                                    </ns2:GDPR>
+                                                </ns2:HMS_Extensions>
+                                            </TPA_Extensions>
+                                        </Customer>
+                                        <PrefCollections>
+                                            <PrefCollection>
+                                                <HotelPref>
+                                                    <TPA_Extensions>
+                                                        <ns2:HMS_Extensions>
+                                                            <ns2:Preferences/>
+                                                        </ns2:HMS_Extensions>
+                                                    </TPA_Extensions>
+                                                </HotelPref>
+                                            </PrefCollection>
+                                        </PrefCollections>
+                                        <TPA_Extensions>
+                                            <ns2:HMS_Extensions>
+                                                <ns2:User_Defined_Fields/>
+                                                <ns2:LinkedProfiles/>
+                                            </ns2:HMS_Extensions>
+                                        </TPA_Extensions>
+                                    </Profile>
+                                </ProfileInfo>
+                            </Profiles>
+                        </ResGuest>
+                    </ResGuests>
+                    <ResGlobalInfo>
+                        <HotelReservationIDs>
+                            <HotelReservationID ResID_Type="16" ResID_Value="1085" ResID_Source="HMS" ResID_SourceContext="PMSAccount"/>
+                            <HotelReservationID ResID_Type="10" ResID_Value="53501327-1" ResID_Source="HMS" ResID_SourceContext="PMS" ForGuest="true"/>
+                        </HotelReservationIDs>
+                        <BasicPropertyInfo ChainCode="SBR" HotelCode="LTRSRT">
+                            <Address>
+                                <AddressLine>50 White Pines Trail</AddressLine>
+                                <CityName>Eustis</CityName>
+                                <PostalCode>04936</PostalCode>
+                                <StateProv StateCode="ME"/>
+                                <CountryName Code="US"/>
+                            </Address>
+                        </BasicPropertyInfo>
+                    </ResGlobalInfo>
+                    <TPA_Extensions>
+                        <ns2:HMS_Extensions>
+                            <ns2:User_Defined_Fields>
+                                <ns2:UDFCHKBOX01>false</ns2:UDFCHKBOX01>
+                                <ns2:UDFCHKBOX02>false</ns2:UDFCHKBOX02>
+                                <ns2:UDFCHKBOX03>false</ns2:UDFCHKBOX03>
+                                <ns2:UDFCHKBOX04>false</ns2:UDFCHKBOX04>
+                                <ns2:UDFCHKBOX05>false</ns2:UDFCHKBOX05>
+                            </ns2:User_Defined_Fields>
+                            <ns2:MarketDetails/>
+                            <ns2:ReservationLifeCycle EventCode="Created" EventSequence="203622" DateTime="2021-05-23T11:17:30.800-02:00"/>
+                            <ns2:Communications VoiceMailWaiting="false" TextMessageWaiting="false"/>
+                        </ns2:HMS_Extensions>
+                    </TPA_Extensions>
+                </HotelReservation>
+            </HotelReservations>
+        </OTA_HotelResNotifRQ>
+    </soapenv:Body>
+</soapenv:Envelope>
